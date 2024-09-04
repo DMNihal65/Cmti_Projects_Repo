@@ -3,6 +3,13 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import Link from 'next/link'
 import { getProjects } from '@/lib/projects'
 
+function formatLink(link: string) {
+  if (link.startsWith('http://') || link.startsWith('https://')) {
+    return link;
+  }
+  return `http://${link}`;
+}
+
 export default async function Home() {
   const projects = await getProjects()
 
@@ -22,7 +29,7 @@ export default async function Home() {
                   <Button className="mt-4">View Project</Button>
                 </Link>
               ) : project.link ? (
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <a href={formatLink(project.link)} target="_blank" rel="noopener noreferrer">
                   <Button className="mt-4">Visit Project</Button>
                 </a>
               ) : null}

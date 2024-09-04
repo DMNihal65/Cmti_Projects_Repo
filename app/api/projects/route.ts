@@ -29,6 +29,8 @@ export async function POST(request: Request) {
     }
   } else if (type === 'link') {
     link = formData.get('link') as string
+    // Remove 'http://' or 'https://' if present
+    link = link.replace(/^https?:\/\//, '')
   }
 
   const newProject = await addProject({ name, description, filePath, link })
