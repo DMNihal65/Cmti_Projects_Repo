@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "React Project",
+    "description": "A sample React project",
+    "path": "/projects/react-app"
+  },
+  {
+    "id": "2",
+    "name": "Vue.js Project",
+    "description": "A sample Vue.js project",
+    "path": "/projects/vue-app"
+  },
+  {
+    "name": "Nihal",
+    "description": "This is the test project",
+    "path": "asdasd",
+    "id": "1725441096754"
+  }
+]

@@ -17,15 +17,9 @@ export default async function Home() {
               <CardDescription>{project.description}</CardDescription>
             </CardHeader>
             <CardContent>
-              {project.filePath ? (
-                <Link href={`/projects/${project.id}`}>
-                  <Button className="mt-4">View Project</Button>
-                </Link>
-              ) : project.link ? (
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  <Button className="mt-4">Visit Project</Button>
-                </a>
-              ) : null}
+              <Link href={`/projects/${project.id}`}>
+                <Button className="mt-4">View Project</Button>
+              </Link>
             </CardContent>
           </Card>
         ))}
